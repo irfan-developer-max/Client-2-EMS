@@ -1,4 +1,6 @@
-import User from "./models/User.js";
+
+import dotenv from "dotenv";
+dotenv.config();import User from "./models/User.js";
 import bcrypt from "bcrypt";
 import connectDB from "./db/db.js";
 const seedUsers=async()=>{
@@ -7,7 +9,7 @@ const seedUsers=async()=>{
         const hashPassword=await bcrypt.hash("admin123",10);
         const newUsers= new User({
             name:"admin",
-            email:"admin@gamil.com",
+            email:"admin@gmail.com",
             password:hashPassword,
             role:"admin",
         })
