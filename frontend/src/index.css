@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.image-curve {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    clip-path: path("M120 C40 150 40 350 110 500 C180 650 180 850 80 1000 L1000 1000 L1000 0 Z");
+
+}
